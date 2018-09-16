@@ -68,6 +68,14 @@ app.get('/about', (req,res)=>{
   });
 });
 
+app.get('/projects', (req,res)=>{
+  //res.send('About Page');
+  res.render('projects.hbs', {
+    pageTitle: 'This is my new project demo'
+//    currentYear: new Date().getFullYear()
+  });
+});
+
 app.get('/bad', (req,res)=>{
   res.send({
     errorMessage: 'This is a bad request'
